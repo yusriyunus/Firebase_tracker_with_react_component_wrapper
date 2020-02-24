@@ -4,7 +4,7 @@ const Firebase_log_event = firebase_log_event();
 
 const handlingFirebaseTracker = (
   e,
-  { event_key, event_type, event_params }
+  { module_name, event_key, event_type, event_params }
 ) => {
   e.preventDefault();
 
@@ -14,27 +14,34 @@ const handlingFirebaseTracker = (
     return false;
   }
 
-  const track_event = tracker(event_key, event_params);
+  const track_event = tracker(module_name, event_key, event_params);
   return track_event;
 };
 
-const FirebaseTracker = (
-  props,
-  { event_type, event_key } = {
-    event_type: "action",
-    event_key: "calender_action_type"
-  }
-) => {
+const FirebaseTracker = props => {
+  const { module_name, event_type, event_key, event_params } = props;
   return (
     <div
       className={`firebase_${event_key}`}
       onClick={e =>
-        handlingFirebaseTracker(e, { event_type, event_key, event_params })
+        handlingFirebaseTracker(e, {
+          module_name,
+          event_type,
+          event_key,
+          event_params
+        })
       }
     >
       {props.children}
     </div>
   );
+};
+
+FirebaseTracker.defaultProps = {
+  module_name: "calendar",
+  event_type: "action",
+  event_key: "calender_action_type",
+  event_params: {}
 };
 
 export default FirebaseTracker;
