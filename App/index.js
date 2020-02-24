@@ -1,6 +1,9 @@
 import FirebaseTracker from "./component_wrapper";
-import Firebase from "./firebase_functionality";
+import firebase, {
+  firebase_init,
+  firebase_log_event
+} from "./firebase_functionality";
 
-export default Firebase;
+export default firebase;
 
-export { FirebaseTracker };
+export { FirebaseTracker, firebase_init, firebase_log_event };
