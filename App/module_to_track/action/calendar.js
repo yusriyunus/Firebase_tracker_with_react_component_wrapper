@@ -18,9 +18,9 @@ const event_list = {
   calender_action_type: {
     trigger: "click",
     action: "type",
-    data: {
+    data: JSON.stringify({
       type: variable_default.calendar_type.today // Default value
-    },
+    }),
     context: module_name,
     element: "",
     url: ""
@@ -28,10 +28,10 @@ const event_list = {
   calender_action_company: {
     trigger: "click",
     action: "company",
-    data: {
+    data: JSON.stringify({
       company: "IHSG", // Default value
       type: variable_default.calendar_type.today // Default value
-    },
+    }),
     context: module_name,
     element: "",
     url: ""
@@ -39,11 +39,11 @@ const event_list = {
   calender_action_search: {
     trigger: "click",
     action: "search",
-    data: {
+    data: JSON.stringify({
       start_date: "",
       end_date: "",
       type: variable_default.calendar_type.today // Default value
-    },
+    }),
     context: module_name,
     element: "",
     url: ""
@@ -51,9 +51,9 @@ const event_list = {
   calender_action_clear: {
     trigger: "click",
     action: "search",
-    data: {
+    data: JSON.stringify({
       type: variable_default.calendar_type.today // Default value
-    },
+    }),
     context: module_name,
     element: "",
     url: ""
