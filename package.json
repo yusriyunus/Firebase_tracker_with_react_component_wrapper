@@ -1,9 +1,10 @@
 {
-  "name": "firebase_tracker_react_wrapper",
+  "name": "@yusriyunus_/firebase_tracker_react_wrapper",
   "version": "1.0.0",
   "description": "Library for tracking ui action using firebase and react component wrapper ",
-  "main": "index.js",
+  "main": "dist/main.bundle.js",
   "scripts": {
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ye_ganda",
@@ -12,5 +13,32 @@
     "firebase": "^7.9.1",
     "react": "^15.6.0",
     "react-dom": "15.6.0"
-  }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusriyunus/Firebase_tracker_with_react_component_wrapper.git"
+  },
+  "keywords": [
+    "firebase",
+    "event",
+    "tracker",
+    "react",
+    "component",
+    "wrapper"
+  ],
+  "bugs": {
+    "url": "https://github.com/yusriyunus/Firebase_tracker_with_react_component_wrapper/issues"
+  },
+  "homepage": "https://github.com/yusriyunus/Firebase_tracker_with_react_component_wrapper#readme"
 }
