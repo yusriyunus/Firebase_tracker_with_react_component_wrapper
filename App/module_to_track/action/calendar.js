@@ -23,7 +23,13 @@ const event_list = {
     }),
     context: module_name,
     element: "",
-    url: ""
+    url: "",
+    id: "",
+    customParams: {
+      firebase: {
+        action: '_action'
+      }
+    }
   },
   calender_action_company: {
     trigger: "click",

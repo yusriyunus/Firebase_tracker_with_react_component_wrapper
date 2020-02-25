@@ -17,7 +17,9 @@ const updateDefaultParamsWithCustomParams = (defaultParams, customParams) => {
 const firebase_log_event = ({ eventName, eventParams } = {}) => {
   if (eventName && eventParams) {
     const firebase_analytics = firebase.analytics();
-    return firebase_analytics.logEvent(eventName, eventParams);
+    // return firebase_analytics.logEvent(eventName, eventParams);
+    console.log({eventName, eventParams});
+
   }
 
   const firebase_log_event_navigate = ({ custom_params }, event_key) => {
