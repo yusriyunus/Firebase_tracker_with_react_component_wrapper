@@ -12,10 +12,13 @@ class ButtonToTrack extends Component () {
 class ExampleComponent extends Component {
     render() {
         const params = {
-            userid: 12
+            action: "stream"
         }
         return (
-            <Wrapper event="calender_action_type" {...params} >
+            <Wrapper 
+                event="calender_action_type" 
+                {...params} 
+            >
                 <ButtonToTrack />
             </Wrapper>
         );
